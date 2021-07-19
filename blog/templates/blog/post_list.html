@@ -3,9 +3,13 @@
         <title>xD</title>
     </head>
     <body>
-        <h1>Hola amigos</h1>
-        <p>Soy Mickey Mouse</p>
-        <ul><li>Amigos de Mickey</li><li>Ropa de Mickey</li></ul>
-        
+        {% for post in posts %}
+            <div>
+                <h2>{{ post.title }}</h2>
+                <p> published: {{ post.published_date }} </p>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+
     </body>
 </html>
